@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: #1D267D;
+    font-family: 'Arial';
+    color: white;
+}
+
+#canvas {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    position: sticky;
+    top: -1.5rem;
+    left: 0; right: 0;
+    padding: 2.5rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 5;
+    margin-bottom: 100vh;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 800;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+nav .links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav .links *:hover,
+nav .links a:active {
+    color: #D4ADFC;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+    font-size: 3vw;
+    padding-inline: 4rem;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+header.layer2 {
+    z-index: 3;
+}
+
+header.layer2 h1 {
+    opacity: 0;
+}
+
+header h1 {
+    font-weight: 800;
+}
+
+header .cta {
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+    background-color: #D4ADFC;
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #1D267D;
+}
+
+section {
+    min-height: 100vh;
+    padding: 6rem 9rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#services .content {
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 3rem;
+}
+
+#services .card {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #0C134F;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+}
+
+#services .card .visual {
+    height: 11rem;
+    background-size: cover;
+    background-position: center;
+}
+
+#services .card.web-design .visual {
+    background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D');
+}
+
+#services .card.uiux .visual {
+    background-image: url('https://miro.medium.com/v2/resize:fit:2000/1*uhNMoPjt8uLnaWxsnVHKMQ.jpeg');
+}
+
+#services .card.front-end .visual {
+    background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2VifGVufDB8fDB8fHww');
+}
+
+#services .card .details {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#services .card .details p {
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#developers .content {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    background-color: #0C134F;
+    height: 65vh;
+    margin-inline: 6rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#developers .content .devs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+#developers .content .devs p {
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+#developers .content .devs p:hover {
+    background-color: #D4ADFC;
+}
+
+#developers .content .dev {
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+
+.dev#yummy {
+    background-image: url('./images/yummy1.jpg');
+}
+
+.dev#kaith {
+    background-image: url('./images/kaith1.jpg');
+}
+
+.dev#clyde {
+    background-image: url('./images/clyde1.jpg');
+}
+
+.dev#bernard {
+    background-image: url('./images/bernard1.jpg');
+}
+
+.dev#allen {
+    background-image: url('./images/allen1.jpg');
+}
+
+.contact-form {
+    padding: 3rem;
+    background-color: #0C134F;
+    margin-inline: 6rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  margin: 10px 0;
+  width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  padding: 8px 20px;
+  border: none;
+  background-color: #1D267D;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact-form button:hover {
+  background-color: #2b3698;
+}
+
+footer {
+    background-color: #0C134F;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+}
